@@ -8,6 +8,20 @@
 
 <a href="jzdq.github.io/xh">按这里打开！</a>
 
-alert("下次再来！")
+<progress id='progress1' value="0" max="10">
+</progress>
+<button onclick="start_run(100)">小彩蛋</button>
+<script>
+function start_run(n)
+{
+    if(n==0){alert("你真厉害，居然发现我了")}
+    var progress1=document.getElementById("progress1")
+    n=n-1
+    cur_task=10-n
+    progress1.value=cur_task
+    setTimeout("start_run("+n+")",10)
+    
+}
+</script>
 </body>
 </html>
