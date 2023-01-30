@@ -1,15 +1,8 @@
-<progress id='progress1' value="0" max="1">
-</progress>
-<button onclick="start_run(1)">弹出窗口？</button>
-<script>
-function start_run(n)
-{
-    if(n==0){alert("666666666666")}
-    var progress1=document.getElementById("progress1")
-    n=n-1
-    cur_task=1-n
-    progress1.value=cur_task
-    setTimeout("start_run("+n+")",1)
-    
-}
-</script>
+<p id="demo">	
+ 	JavaScript 可以触发事件，就像按钮点击。</	
+ 
+ 	<script>	
+ function myFunction() {
+ 	document.getElementById("demo")	
+ }
+ 	</script>
