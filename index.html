@@ -18,6 +18,8 @@
 
     <div id="location" hidden></div>
 
+    <button onclick="refreshLocation()">刷新</button>
+
     <script>
 
       function getLocation() {
@@ -34,6 +36,16 @@
 
       }
 
+      function refreshLocation() {
+
+        document.getElementById("location").setAttribute("hidden", true);
+
+        document.querySelector("p").removeAttribute("hidden");
+
+        getLocation();
+
+      }
+
       function showPosition(position) {
 
         var latitude = position.coords.latitude;
@@ -44,7 +56,9 @@
 
         document.getElementById("location").removeAttribute("hidden");
 
-        document.querySelector("p").remove();
+        document.querySelector("p").setAttribute("hidden", true);
+
+        document.querySelector("button").blur();
 
       }
 
